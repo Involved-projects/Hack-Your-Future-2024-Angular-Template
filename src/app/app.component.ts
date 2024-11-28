@@ -18,4 +18,10 @@ export class AppComponent {
   }
 
   name = "Initial name";
+
+  items: string[] = [];
+
+  addItem() {
+    this.items.push(this.name);
+  }
 }

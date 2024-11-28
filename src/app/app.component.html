@@ -4,4 +4,13 @@
 <h2>Counter: {{ counter }}</h2>
 
 <input [(ngModel)]="name" />
+<button (click)="addItem()">Add item</button>
 <h2>My name: {{ name }}</h2>
+
+<ul>
+  @for (item of items; track $index) {
+    <li>{{ item }}</li>
+  } @empty {
+    <li>There are no items yet</li>
+  }
+</ul>
