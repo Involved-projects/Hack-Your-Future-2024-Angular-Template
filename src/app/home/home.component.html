@@ -1,0 +1,16 @@
+<p>Welcome to my website</p>
+
+<button (click)="increment()">Increment</button>
+<h2>Counter: {{ counter }}</h2>
+
+<input [(ngModel)]="name" />
+<button (click)="addItem()">Add item</button>
+<h2>My name: {{ name }}</h2>
+
+<ul>
+  @for (item of items; track $index) {
+    <app-todo [name]="item"></app-todo>
+  } @empty {
+    <li>There are no items yet</li>
+  }
+</ul>
