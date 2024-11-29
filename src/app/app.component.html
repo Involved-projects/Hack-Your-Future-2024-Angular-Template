@@ -9,7 +9,7 @@
 
 <ul>
   @for (item of items; track $index) {
-    <li>{{ item }}</li>
+    <app-todo [name]="item"></app-todo>
   } @empty {
     <li>There are no items yet</li>
   }
