@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DataService } from '../data.service';
 import { TodoComponent } from '../todo/todo.component';
 
 @Component({
@@ -9,11 +10,7 @@ import { TodoComponent } from '../todo/todo.component';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  counter = 0;
-
-  increment() {
-    this.counter++;
-  }
+  dataService = inject(DataService);
 
   name = "Initial name";
 

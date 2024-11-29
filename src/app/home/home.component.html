@@ -1,7 +1,7 @@
 <p>Welcome to my website</p>
 
-<button (click)="increment()">Increment</button>
-<h2>Counter: {{ counter }}</h2>
+<button (click)="dataService.increment()">Increment</button>
+<h2>Counter: {{ dataService.counter }}</h2>
 
 <input [(ngModel)]="name" />
 <button (click)="addItem()">Add item</button>
